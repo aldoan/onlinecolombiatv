@@ -1,0 +1,398 @@
+@charset "utf-8";
+/*====== Desarrollado por Alfonso Dominguez Angarita - aldoan87@gmail.com ,Noviembre 2013 ===========*/
+
+/* CSS Document */
+
+
+/*::::::::::::::::::::::::::::::::::::::::FONT-FACE::::::::::::::::::::::::::::::::::::::::::::::*/
+@font-face {
+    font-family: 'web_serveroffregular';
+    src: url('../fonts/Web_Serveroff-webfont.eot');
+    src: url('../fonts/Web_Serveroff-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Web_Serveroff-webfont.woff') format('woff'),
+         url('../fonts/Web_Serveroff-webfont.ttf') format('truetype'),
+         url('../fonts/Web_Serveroff-webfont.svg#web_serveroffregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+/*::::::::GENERAL SETTINGS::::::::::*/
+body{
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 16px;
+	font-family:'web_serveroffregular', 'helvetica';
+	min-width: 320px;	
+	line-height: 1;
+}
+
+
+
+:focus {
+  outline: 0;
+}
+ 
+/* texto insertado/borrado */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+ul li, ol li{ list-style: none;} 
+ul { line-height: 1.5;}
+
+a {
+	color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s linear 0s;
+}
+
+h1{
+	font-size: 35px;
+}
+
+h1, h2, h3, h4{
+	transition: all 0.3s linear 0s;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+
+/*:::::::Class::::::*/
+
+	ul.list-line > li{
+		float: left;
+		display: inline-block;
+	}
+
+	.toolbar {
+	    float: right;
+	    margin: 100px 15px 0;
+	    padding: 0 20px;
+	}
+
+	ul.social li a{
+		background-position: center center;
+	    background-repeat: no-repeat;
+	    color: #FFFFFF;
+	    display: block;
+	    height: 36px;
+	    text-indent: -9999px;
+	    width: 36px;
+	}
+/*:::::::Class::::::*/
+
+
+
+section.wrapper{
+	position: relative;
+}
+
+header {
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+	header h1.logo{
+		display: inline-block; 
+		float  : left;
+	}
+
+		header h1.logo a {
+			background : url("../img/icn/logo.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+			display    : block;
+			height     : 26px;
+			position   : relative;
+			text-indent: -9999px;
+			width      : 103px;
+			height     : 100px;
+		}
+
+	/*header nav{
+		display: block;
+	    font-size: 0;
+	    font-weight: normal;
+	    right: 0;
+	    text-transform: uppercase;
+	    top: 20px;
+	    position: fixed;
+	    z-index: 99;
+	}
+
+	ul.menu{
+		float: left;
+	    margin: 0;
+	    padding: 0;
+	}
+
+	ul.menu > li{
+		background-color: #000000;
+		font-size: 20px;
+	    height: 80px;
+	    margin: 0;
+	    padding: 0;
+	    position: relative;
+	    transition: background-color 0.3s linear 0s;
+	}
+
+		ul.menu > li:hover{ cursor: pointer; }
+
+		ul.menu > li:hover ul.submenu{
+			 opacity: 1;
+    		 top: 80px;
+		}
+			ul.menu > li a{
+				display: block;
+			    height: 52px;
+			    line-height: 1.3;
+			    padding: 28px 20px 0;
+			    text-decoration: none;
+			}
+
+			ul.menu > li a.active{ opacity: 0.5; }
+
+			ul.menu > li a:hover, ul.menu > li:hover a{
+				background-color: #FFFFFF;
+		    	color: #000000;
+			}
+			ul.menu > li a.active:hover{ opacity: 1; }
+
+	ul.menu > li ul.submenu{
+		box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+	    height: auto;
+	    left: 0;
+	    margin: 0;
+	    opacity: 0;
+	    position: absolute;
+	    text-align: left;
+	    text-transform: none;
+	    top: -9999px;
+	    transition: opacity 0.3s linear 0s;
+	    width: 200px;
+	    z-index: 999;
+	}
+		ul.menu > li ul.submenu li{
+			background-color:#FFFFFF; 
+			border: medium none;
+		    display: block;
+		    float: none !important;
+		    font-size: 17px;
+		    height: auto;
+		    margin: 0;
+		    padding: 0;
+		    position: relative;
+		    text-shadow: none;
+		    width: 200px;
+		}
+		ul.menu > li ul.submenu li a{
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+		    clear: both;
+		    color: #000000;
+		    display: block;
+		    float: none;
+		    height: auto;
+		    padding: 0.5em 20px !important;
+		}
+			ul.menu > li ul.submenu li:hover a{ box-shadow: inset 0px 0px 1px black; }*/
+
+	img#loading {
+	    left: 48.2%;
+	    position: absolute;
+	    top: 46.8%;
+	    z-index: 0;
+	}
+	a.goButton{
+		position: absolute;
+		top: 40%;
+		left: 45%;
+		background:url('../img/icn/play.png') no-repeat;
+		width: 111px;
+		height: 111px;
+		z-index: 20;
+		opacity: 0.6;
+	}
+		a.goButton:hover{
+			opacity: 1;
+		}
+
+	#videoContainer iframe{
+	    height: 100%;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	}
+
+	.rsCloseVideoBtn {
+	   
+	}
+
+	#closeVideo{
+		background-color: #1E73BE;
+		display: none;
+		cursor: pointer;
+	    height: 60px;
+	    position: absolute;
+	    right: 0;
+	    top: 20px;
+	    width: 60px;
+	    z-index: 99999;
+	    background-image: url("../img/icn/controls.png");
+	    background-position: left -180px;
+	    background-repeat: no-repeat;
+	    height: 60px;
+	    margin: 0;
+	    transition: background-color 0.3s linear 0s;
+	    width: 60px;
+	}
+
+			#closeVideo:hover{
+				background-color: #000000;
+			}
+
+	nav.sidemenu{
+		position: fixed;
+		top: 0;
+		right: 0px;
+		width: 65px;
+		background: rgba(0,0,0,0.5);
+		z-index: 20;
+		min-height: 100%;
+	}
+
+	nav.sidemenu > ul{
+		margin-top: 200px;
+		margin-left: 10px;
+	}
+
+	nav.sidemenu > ul > li {
+		margin-bottom: 100px;
+		transform: rotate(90deg);
+	}
+
+	nav.sidemenu ul li > a{
+		color: white;
+	}
+
+	.sidecontainer{
+		position: fixed;
+		top: 0;
+		right: -435px;
+		width: 500px;
+		background: rgba(0,0,0,0.5);
+		z-index: 10;
+		min-height: 100%;
+	}
+
+	.sidecontainer .goback{
+		cursor: pointer; 
+		bottom: 10px;
+	    display: none;
+	    left: 20px;
+	    position: absolute;
+	}
+
+	.content {
+	    margin: 60px 0 0 90px;
+	}
+
+	.content > h1 {
+	    margin-bottom: 40px;
+	    text-transform: uppercase;
+	}
+
+	ul.categories{
+
+	}
+
+	ul.categories li a {
+		font-size: 18px;
+		text-transform: uppercase;
+	}	
+
+
+	ul.social li a{
+		background-position: center center;
+	    background-repeat: no-repeat;
+	    color: #FFFFFF;
+	    display: block;
+	    height: 36px;
+	    width: 36px;
+	    text-indent: -9999px;
+	}
+		ul.social li:last-child a{
+			height: 30px;
+	   		width: 30px;
+		}
+
+	ul.social li:nth-child(1) a{ background-image: url("../img/icn/twitter.png"); }
+	ul.social li:nth-child(1) a:hover{ background-color: #00BEF6; }
+	ul.social li:nth-child(2) a{ background-image: url("../img/icn/facebook.png"); margin-right: 12px; }
+	ul.social li:nth-child(2) a:hover{ background-color: #3B5998; }
+	ul.social li:nth-child(3) a{ background-image: url("../img/icn/search-light.png");  border: 2px solid; }
+	ul.social li:nth-child(3) a:hover{ background-color: #000000; }
+
+
+
+	div#slides ul li div.container {
+	    display: block;
+	    left: 0 ;
+	    max-width: 40%;
+	    overflow: hidden;
+	    padding-bottom: 0;
+	    position: absolute;
+	    top: 250px;
+	}
+
+		div#slides ul li div.container  h2{
+			font-size: 1.95em;
+			font-weight: lighter;
+			background-color: #1E73BE;
+			clear: both;
+		    float: left;
+		    line-height: normal;
+		    margin: 0;
+		    padding: 5px 20px;
+		    left: -397px;
+		    position: relative;
+		}
+
+		div#slides ul li div.container  h2:hover{
+			background-color: #000000;
+		}
+			div#slides ul li div.container  h2 a{
+				display: block;
+			    float: left;
+			    padding: 5px 20px;	
+			}
+	nav.slides-navigation {
+	    position: fixed;
+	    right: 0;
+	    top: 0;
+	    z-index: 20;
+	}
+	nav.slides-navigation a h1{
+		background-image: url("../img/icn/controls.png");
+	    cursor: pointer;
+	    height: 60px;
+	    transition: all 0.3s linear 0s;
+	    width: 60px;
+	    text-indent: -9999px;
+	    opacity: 0.7;
+	}
+
+	nav.slides-navigation a h1:hover{
+		opacity: 1;
+	}
+
+	nav.slides-navigation a:first-child h1{ background-position: left -60px;}
+	nav.slides-navigation a:last-child h1{background-position: left top;}
