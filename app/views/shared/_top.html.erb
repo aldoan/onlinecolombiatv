@@ -1,0 +1,33 @@
+
+<% if user_signed_in? %>
+<ul class="right-menu logged">
+    <% unless current_user.profile_picture.blank? %>
+      <li> 
+        <%= image_tag(current_user.profile_picture_url(:thumbnail), :alt => current_user.full_name)%> 
+      </li>
+    <% end %>
+  <li><%= link_to current_user.username, dashboards_path %></li>
+  <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+</ul> 
+<% else %>
+  <% if (params[:controller] == 'home') || ( !(user_signed_in?) && (params[:controller] == 'buildings' || params[:controller] == 'apartments' ) ) %>
+    <div class="find left">
+      <div class="search left"> 
+          <%= form_tag root_url do %>
+            <%= text_field_tag :building_text, params[:building_text], :value => params[:building_text], data: { autocomplete_source: Building.where('active = 1').includes(:apartments, :zone).map{ |b| { :label => "#{b.name}, #{ if !b.apartments.blank? then b.apartments.select { |a| a.active == 1 }.size else "0" end} apartamentos #{"- " + b.zone.name.capitalize if b.zone }", :value => b.id }} }, :placeholder => "Buscar por Edificios", :class => "left hregular search autocomplete head", :id => "top_search_input", :autocomplete => "off"  %>
+            <%= hidden_field_tag :b_id, params[:b_id], :id => "hidden_b" %>
+      </div>
+        <%= submit_tag "Encontrar", :class => "left hnmedium head search" %>
+    </div>
+    <% end %>
+    <% end %>
+    <ul class="right-menu">
+      <li> 
+        <%= link_to "Registrate como Productor", new_user_registration_path, :class => "fblack" %>
+      </li>
+      <li> 
+        <%= link_to 'Ingresa', new_user_session_path, :class => "fblack" %>
+      </li> 
+    </ul>
+<% end %> 
+

@@ -1,0 +1,35 @@
+<!-- ====== Desarrollado por Alfonso Dominguez Angarita - aldoan87@gmail.com ,Noviembre 2013 ======== -->
+<!DOCTYPE HTML>
+<html lang="es-419">
+<head>
+  <title> &rsaquo; La TV de Colombia Online</title>
+	<link rel="shortcut icon" href="img/icn/favicon.jpg">
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Alfonso Dominguez Angarita, aldoan87@gmail.com" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	 
+	<meta name="Description" CONTENT="" />
+	<meta name="Classification" CONTENT="" />
+	<meta name="Keywords" CONTENT="" />
+	<meta name="robots" content="index  nofollow"/> 
+	<meta name="GOOGLEBOT" content="index nofollow"/> 	
+	<!--[if IE]>  
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+		<script src="js/fetchak.js"></script>  
+	<![endif]--> 
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+
+</head>
+<body>
+<%= link_to 'Logout', destroy_producer_session_path, :method => :delete %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+
+</body>
+</html>
